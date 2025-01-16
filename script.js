@@ -1,6 +1,16 @@
+const input = document.querySelector('input');
+const digits = document.querySelector('.container')
+
 let firstNum;
 let secondNum;
 let operator = ['+', '-', '*', '/']
+
+
+digits.addEventListener('click', function(e) {
+    if(e.target.classList.contains('numbers')) {
+        input.value += e.target.textContent;
+    } 
+})
 
 const add = function(a, b) {
     return a + b;
@@ -19,10 +29,10 @@ const divide = function(a, b) {
 }
 
 const operate = function() {
-    console.log(add(10, 5));       
-    console.log(subtract(10, 5));   
-    console.log(multiply(10, 5));   
-    console.log(divide(10, 5));     
+    // console.log(add());       
+    // console.log(subtract());   
+    // console.log(multiply());   
+    // console.log(divide());     
 }
 
 operate();
