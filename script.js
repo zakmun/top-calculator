@@ -9,6 +9,8 @@ let operator = ['+', '-', '*', '/']
 digits.addEventListener('click', function(e) {
     if(e.target.classList.contains('numbers')) {
         input.value += e.target.textContent;
+        displayNum = input.value;
+        console.log(displayNum)
     } 
 })
 
