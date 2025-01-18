@@ -44,6 +44,17 @@ digits.addEventListener('click', function(e) {
     }
 });
 
+equals.addEventListener('click', function() {
+    if (num1 !== null && operator !== null && input.value !== '') {
+        num2 = parseFloat(input.value);
+        const result = operate(operator, num1, num2);
+        input.value = result; // Show the result in the input field
+        num1 = result; // Update num1 to the result for further operations
+        num2 = null; // Reset num2 for the next calculation
+        operator = null; // Reset operator
+    }
+});
+
 
 const operate = function(operatorButton, num1, num2) {
 
