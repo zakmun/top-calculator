@@ -25,6 +25,21 @@ const divide = function(a, b) {
     return a / b;
 }
 
+const operate = function(operatorButton, num1, num2) {
+
+  
+    if (operatorButton === '+') {
+       return add(num1, num2)
+   } else if (operatorButton === '-') {
+       return subtract(num1, num2)
+   } else if (operatorButton === '*') {
+       return multiply(num1, num2)
+   } else {
+       return divide(num1, num2)
+   }
+
+}
+
 digits.addEventListener('click', function(e) {
     if (e.target.classList.contains('numbers')) {
         // Append the number to the input field
@@ -54,24 +69,6 @@ equals.addEventListener('click', function() {
         operator = null; // Reset operator
     }
 });
-
-
-const operate = function(operatorButton, num1, num2) {
-
-  
-         if (operatorButton === '+') {
-            return add(num1, num2)
-        } else if (operatorButton === '-') {
-            return subtract(num1, num2)
-        } else if (operatorButton === '*') {
-            return multiply(num1, num2)
-        } else {
-            return divide(num1, num2)
-        }
- 
-}
-
-operate('+', 3, 5);
 
 
 clear.addEventListener('click', function() {
