@@ -48,14 +48,7 @@ digits.addEventListener('click', function(e) {
 const operate = function(operatorButton, num1, num2) {
 
   
-    operators.forEach(function(operatorButton) {
-        operatorButton.addEventListener('click', function(e) {
-            console.log(e.target.textContent);
-        });
-    });
-    
-
-        if (operatorButton === '+') {
+         if (operatorButton === '+') {
             return add(num1, num2)
         } else if (operatorButton === '-') {
             return subtract(num1, num2)
