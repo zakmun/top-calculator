@@ -72,3 +72,11 @@ const operate = function(operatorButton, num1, num2) {
 }
 
 operate('+', 3, 5);
+
+
+clear.addEventListener('click', function() {
+    input.value = ''; // Clear the input
+    num1 = null; // Reset num1
+    num2 = null; // Reset num2
+    operator = null; // Reset operator
+});
