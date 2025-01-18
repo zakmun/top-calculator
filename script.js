@@ -26,11 +26,23 @@ const divide = function(a, b) {
 }
 
 digits.addEventListener('click', function(e) {
-    if(e.target.classList.contains('numbers')) {
+    if (e.target.classList.contains('numbers')) {
+        // Append the number to the input field
         input.value += e.target.textContent;
-        num1 = input.value;
-    } 
-})
+    } else if (e.target.classList.contains('operators')) {
+        // When an operator is clicked, store num1 and the operator, then clear input for num2
+        if (num1 === null) {
+            num1 = parseFloat(input.value);
+            operator = e.target.textContent;
+            input.value = ''; // Clear the input for the second number
+        } else if (num2 !== null) {
+            // If both num1 and num2 are already stored, perform operation
+            num1 = operate(operator, num1, num2);
+            operator = e.target.textContent;
+            input.value = ''; // Clear the input for the next number
+        }
+    }
+});
 
 
 const operate = function(operatorButton, num1, num2) {
