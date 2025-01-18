@@ -1,5 +1,6 @@
 const input = document.querySelector('input');
 const digits = document.querySelector('.container')
+const operators = document.querySelectorAll('.operators');
 
 let num1;
 let num2;
@@ -11,6 +12,12 @@ digits.addEventListener('click', function(e) {
         console.log(displayNum)
     } 
 })
+
+operators.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        console.log(e.target.textContent);
+    });
+});
 
 const add = function(a, b) {
     return a + b;
