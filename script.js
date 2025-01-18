@@ -2,6 +2,8 @@ const input = document.querySelector('input');
 const digits = document.querySelector('.container')
 const operators = document.querySelectorAll('.operators');
 const equals = document.querySelector('.equals');
+const clear = document.querySelector('.clear');
+
 
 let num1 = null;
 let num2 = null;
