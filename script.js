@@ -52,11 +52,13 @@ digits.addEventListener('click', function(e) {
             num1 = parseFloat(input.value);
             operator = e.target.textContent;
             input.value = ''; // Clear the input for the second number
-        } else if (num2 !== null) {
-            // If both num1 and num2 are already stored, perform operation
-            num1 = operate(operator, num1, num2);
-            operator = e.target.textContent;
-            input.value = ''; // Clear the input for the next number
+        } else if (num2 === null && input.value !== '') {
+            num2 = parseFloat(input.value); // Store the second number
+            const result = operate(operator, num1, num2); // Perform operation
+            input.value = result; // Display the result
+            num1 = result; // Update num1 with the result for further operations
+            num2 = null; // Reset num2 for the next calculation
+            operator = e.target.textContent; // Update the operator
         }
     }
 });
