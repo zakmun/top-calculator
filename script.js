@@ -15,14 +15,16 @@ function divide (num1, num2) {
 }
 
 function operate (operatorSign, num1, num2) {
-    if (operatorSign = '+') {
-        return add()
-    } else if (operatorSign = '-') {
-        return subtract()
-    } else if (operatorSign = '*') {
-        return multiply()
+    if (operatorSign === '+') {
+        return add(num1, num2)
+    } else if (operatorSign === '-') {
+        return subtract(num1, num2)
+    } else if (operatorSign === '*') {
+        return multiply(num1, num2)
+    } else if (operatorSign === '/') {
+        return divide(num1, num2)
     } else {
-        return divide()
+        return NaN
     }
 }
 
