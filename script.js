@@ -2,8 +2,8 @@ const btns = document.querySelectorAll('.numbers')
 
 
 btns.forEach(btns => {
-    btns.addEventListener("click", () => {
-        console.log(btns)
+    btns.addEventListener("click", (e) => {
+        console.log(e.target.innerText)
     })
 });
 
