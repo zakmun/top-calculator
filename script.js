@@ -1,9 +1,12 @@
 const btns = document.querySelectorAll('.numbers')
+const input = document.querySelector('#input')
 
 
 btns.forEach(btns => {
     btns.addEventListener("click", (e) => {
-        console.log(e.target.innerText)
+        
+        input.value += e.target.innerText
+
     })
 });
 
