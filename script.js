@@ -6,6 +6,10 @@ const clear = document.querySelector('.clear')
 
 let displayValue;
 
+let firstNum = '';
+let secondNum = '';
+let operator = '';
+
 btns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         
