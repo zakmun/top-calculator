@@ -8,7 +8,7 @@ let displayValue;
 
 let firstNum = '';
 let secondNum = '';
-let operator = '';
+let operatorVar = '';
 
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
@@ -27,10 +27,11 @@ numbers.forEach(num => {
 
 operatorBTN.forEach(ops => {
     ops.addEventListener("click", (e) => {
-        operator = e.target.innerText
-        console.log(operator)
+        operatorVar = e.target.innerText
+        console.log(operatorVar)
     })
 });
+
 
 function add (num1, num2) {
     return num1 + num2
