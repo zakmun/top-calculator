@@ -10,8 +10,8 @@ let firstNum = '';
 let secondNum = '';
 let operator = '';
 
-numbers.forEach(btn => {
-    btn.addEventListener("click", (e) => {
+numbers.forEach(num => {
+    num.addEventListener("click", (e) => {
         
         input.value += e.target.innerText
         displayValue = Number(input.value)
