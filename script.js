@@ -1,4 +1,4 @@
-const btns = document.querySelectorAll('.numbers')
+const numbers = document.querySelectorAll('.numbers')
 const input = document.querySelector('#input')
 const operators = document.querySelector('.operator')
 const equals = document.querySelector('.equals')
@@ -10,7 +10,7 @@ let firstNum = '';
 let secondNum = '';
 let operator = '';
 
-btns.forEach(btn => {
+numbers.forEach(btn => {
     btn.addEventListener("click", (e) => {
         
         input.value += e.target.innerText
