@@ -12,9 +12,15 @@ let operator = '';
 
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
-        
-        input.value += e.target.innerText
-        displayValue = Number(input.value)
+        if (operator === "") {
+            firstNum += e.target.innerText
+            console.log(firstNum)
+        } else {
+            secondNum += e.target.innerText
+            console.log(secondNum)
+        }
+        // input.value += e.target.innerText
+        // displayValue = Number(input.value)
            
 
     })
