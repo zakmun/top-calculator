@@ -1,5 +1,8 @@
 const btns = document.querySelectorAll('.numbers')
 const input = document.querySelector('#input')
+const operators = document.querySelector('.operator')
+const equals = document.querySelector('.equals')
+const clear = document.querySelector('.clear')
 
 let displayValue;
 
