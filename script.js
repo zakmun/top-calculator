@@ -1,6 +1,6 @@
 const numbers = document.querySelectorAll('.numbers')
 const input = document.querySelector('#input')
-const operators = document.querySelector('.operator')
+const operatorBTN = document.querySelector('.operator')
 const equals = document.querySelector('.equals')
 const clear = document.querySelector('.clear')
 
@@ -21,10 +21,16 @@ numbers.forEach(num => {
         }
         // input.value += e.target.innerText
         // displayValue = Number(input.value)
-           
 
     })
 });
+
+// operators.forEach(ops => {
+//     ops.addEventListener("click", (e) => {
+//         operator = e.target.innerText
+//         console.log(opera)
+//     })
+// });
 
 function add (num1, num2) {
     return num1 + num2
