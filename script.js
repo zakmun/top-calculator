@@ -3,8 +3,6 @@ const input = document.querySelector('#input')
 const operatorBTN = document.querySelectorAll('.operator')
 const clear = document.querySelector('.clear')
 
-//let displayValue;
-
 let firstNum = '';
 let secondNum = '';
 let operatorVar = '';
@@ -27,6 +25,7 @@ numbers.forEach(num => {
             input.value = secondNum
         }
    
+
     })
 });
 
@@ -59,7 +58,12 @@ function multiply (num1, num2) {
 }
 
 function divide (num1, num2) {
+    if (num1 || num2 == '0') {
+        return 'Can\'t divide by 0 you bum'
+    }
+
     return num1 / num2
+    
 }
 
 function operate (operatorSign, num1, num2) {
