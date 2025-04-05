@@ -10,7 +10,7 @@ let operatorVar = '';
 input.value = 0;
 
 clear.addEventListener("click", () => {
-        input.value = '0'
+        input.value = 0
         firstNum = '';
         secondNum = '';
         operatorVar = '';
@@ -27,27 +27,26 @@ numbers.forEach(num => {
             input.value = secondNum
         }
    
-
     })
-});
+}); 
 
 operatorBTN.forEach(ops => {
     ops.addEventListener("click", (e) => {
-
         if (e.target.innerText !== "=") {
             operatorVar = e.target.innerText
             input.value = operatorVar
         } else {
             const result = operate(operatorVar, Number(firstNum), Number(secondNum))
             input.value = Number(result.toFixed(2))
-
-            firstNum = Number(result.toFixed(2));
+            firstNum = input.value;
             secondNum = ''
             operatorVar = ''
         }
     
     })
 });
+
+
 
 
 function add (num1, num2) {
