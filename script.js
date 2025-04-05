@@ -27,7 +27,6 @@ numbers.forEach(num => {
             input.value = secondNum
         }
    
-
     })
 });
 
