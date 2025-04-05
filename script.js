@@ -9,11 +9,15 @@ let operatorVar = '';
 
 input.value = 0;
 
+operatorBTN.forEach(btn => btn.disabled = true);
+    
+
 clear.addEventListener("click", () => {
         input.value = 0
         firstNum = '';
         secondNum = '';
         operatorVar = '';
+        operatorBTN.forEach(btn => btn.disabled = true);
 })
 
 
@@ -22,6 +26,7 @@ numbers.forEach(num => {
         if (operatorVar === "") {
             firstNum += e.target.innerText
             input.value = firstNum
+            operatorBTN.forEach(btn => btn.disabled = false);
         } else {
             secondNum += e.target.innerText
             input.value = secondNum
