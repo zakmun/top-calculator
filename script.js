@@ -7,16 +7,13 @@ let firstNum = '';
 let secondNum = '';
 let operatorVar = '';
 
-function clearBtn() {
-    clear.addEventListener("click", () => {
+
+clear.addEventListener("click", () => {
         input.value = ''
         firstNum = '';
         secondNum = '';
         operatorVar = '';
-    })
-}
-clearBtn()
-
+})
 
 
 numbers.forEach(num => {
@@ -46,7 +43,6 @@ operatorBTN.forEach(ops => {
             firstNum = Number(result.toFixed(2));
             secondNum = ''
             operatorVar = ''
-            input.value = Number(result.toFixed(2));
         }
     
     })
@@ -90,3 +86,8 @@ function operate (operatorSign, num1, num2) {
 
 operate()
 
+
+// if firstnum = result
+// resultdisplaying = true
+// and user clicks numbers instead of operator
+// reset input field
