@@ -41,9 +41,14 @@ operatorBTN.forEach(ops => {
         } else {
             const result = operate(operatorVar, Number(firstNum), Number(secondNum))
             input.value = result
+
+            firstNum = result;
+            secondNum = ''
+            operatorVar = ''
+            input.value = result
         }
 
-        
+    
     })
 });
 
