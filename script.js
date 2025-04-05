@@ -7,9 +7,10 @@ let firstNum = '';
 let secondNum = '';
 let operatorVar = '';
 
+input.value = 0;
 
 clear.addEventListener("click", () => {
-        input.value = ''
+        input.value = '0'
         firstNum = '';
         secondNum = '';
         operatorVar = '';
