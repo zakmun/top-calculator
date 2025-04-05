@@ -18,6 +18,7 @@ function clearBtn() {
 clearBtn()
 
 
+
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
         if (operatorVar === "") {
@@ -40,17 +41,16 @@ operatorBTN.forEach(ops => {
             input.value = operatorVar
         } else {
             const result = operate(operatorVar, Number(firstNum), Number(secondNum))
-            input.value = result
+            input.value = Number(result.toFixed(2))
 
-            firstNum = result;
+            firstNum = Number(result.toFixed(2));
             secondNum = ''
             operatorVar = ''
-            input.value = result
+            input.value = Number(result.toFixed(2));
         }
     
     })
 });
-
 
 
 function add (num1, num2) {
