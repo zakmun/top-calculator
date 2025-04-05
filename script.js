@@ -3,7 +3,7 @@ const input = document.querySelector('#input')
 const operatorBTN = document.querySelectorAll('.operator')
 const clear = document.querySelector('.clear')
 
-let displayValue;
+//let displayValue;
 
 let firstNum = '';
 let secondNum = '';
@@ -18,8 +18,7 @@ numbers.forEach(num => {
             secondNum += e.target.innerText
             input.value = secondNum
         }
-        // input.value += e.target.innerText
-        // displayValue = Number(input.value)
+   
 
     })
 });
@@ -36,8 +35,6 @@ operatorBTN.forEach(ops => {
         }
 
         
-        // operatorVar = e.target.innerText
-        // console.log(operatorVar)
     })
 });
 
