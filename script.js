@@ -10,6 +10,9 @@ let operatorVar = '';
 function clearDisplay() {
     clear.addEventListener("click", () => {
         input.value = ''
+        firstNum = '';
+        secondNum = '';
+        operatorVar = '';
     })
 }
 clearDisplay()
