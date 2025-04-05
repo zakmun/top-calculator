@@ -9,6 +9,14 @@ let firstNum = '';
 let secondNum = '';
 let operatorVar = '';
 
+function clearDisplay() {
+    clear.addEventListener("click", () => {
+        input.value = ''
+    })
+}
+clearDisplay()
+
+
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
         if (operatorVar === "") {
