@@ -51,39 +51,20 @@ operatorBTN.forEach(ops => {
     })
 });
 
-
-
-
-function add (num1, num2) {
-    return num1 + num2
-}
-
-function subtract (num1, num2) {
-    return num1 - num2
-}
-
-function multiply (num1, num2) {
-    return num1 * num2
-}
-
-function divide (num1, num2) {
-    if (num1 == '0' || num2 == '0') {
-        return 'Can\'t divide by 0 you bum'
-    } else {
-        return num1 / num2
-    }
-
-}
-
 function operate (operatorSign, num1, num2) {
+    
     if (operatorSign === '+') {
-        return add(num1, num2)
+        return num1 + num2
     } else if (operatorSign === '-') {
-        return subtract(num1, num2)
+        return num1 - num2
     } else if (operatorSign === '*') {
-        return multiply(num1, num2)
+        return num1 * num2
     } else if (operatorSign === '/') {
-        return divide(num1, num2)
+        if (num1 == '0' || num2 == '0') {
+            return 'Can\'t divide by 0 you bum'
+        } else {
+            return num1 / num2
+        }
     } else {
         return NaN
     }
