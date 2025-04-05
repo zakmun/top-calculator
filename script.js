@@ -37,6 +37,7 @@ numbers.forEach(num => {
 
 operatorBTN.forEach(ops => {
     ops.addEventListener("click", (e) => {
+
         if (e.target.innerText !== "=") {
             operatorVar = e.target.innerText
             input.value = operatorVar
@@ -65,15 +66,9 @@ function operate (operatorSign, num1, num2) {
         } else {
             return num1 / num2
         }
-    } else {
-        return NaN
+
     }
 }
 
 operate()
 
-
-// if firstnum = result
-// resultdisplaying = true
-// and user clicks numbers instead of operator
-// reset input field
