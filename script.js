@@ -1,7 +1,6 @@
 const numbers = document.querySelectorAll('.numbers')
 const input = document.querySelector('#input')
 const operatorBTN = document.querySelectorAll('.operator')
-const equals = document.querySelector('.equals')
 const clear = document.querySelector('.clear')
 
 let displayValue;
@@ -12,7 +11,7 @@ let operatorVar = '';
 
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
-        if (operator === "") {
+        if (operatorVar === "") {
             firstNum += e.target.innerText
             console.log(firstNum)
         } else {
@@ -27,8 +26,18 @@ numbers.forEach(num => {
 
 operatorBTN.forEach(ops => {
     ops.addEventListener("click", (e) => {
-        operatorVar = e.target.innerText
-        console.log(operatorVar)
+
+        if (e.target.innerText !== "=") {
+            operatorVar = e.target.innerText
+            console.log(operatorVar)
+        } else {
+            const result = operate(operatorVar, Number(firstNum), Number(secondNum))
+            console.log(result)
+        }
+
+        
+        // operatorVar = e.target.innerText
+        // console.log(operatorVar)
     })
 });
 
@@ -64,3 +73,4 @@ function operate (operatorSign, num1, num2) {
 }
 
 operate()
+
