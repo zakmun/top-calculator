@@ -7,7 +7,7 @@ let firstNum = '';
 let secondNum = '';
 let operatorVar = '';
 
-function clearDisplay() {
+function clearBtn() {
     clear.addEventListener("click", () => {
         input.value = ''
         firstNum = '';
@@ -15,7 +15,7 @@ function clearDisplay() {
         operatorVar = '';
     })
 }
-clearDisplay()
+clearBtn()
 
 
 numbers.forEach(num => {
@@ -47,10 +47,10 @@ operatorBTN.forEach(ops => {
             operatorVar = ''
             input.value = result
         }
-
     
     })
 });
+
 
 
 function add (num1, num2) {
