@@ -13,10 +13,10 @@ numbers.forEach(num => {
     num.addEventListener("click", (e) => {
         if (operatorVar === "") {
             firstNum += e.target.innerText
-            console.log(firstNum)
+            input.value = firstNum
         } else {
             secondNum += e.target.innerText
-            console.log(secondNum)
+            input.value = secondNum
         }
         // input.value += e.target.innerText
         // displayValue = Number(input.value)
@@ -29,10 +29,10 @@ operatorBTN.forEach(ops => {
 
         if (e.target.innerText !== "=") {
             operatorVar = e.target.innerText
-            console.log(operatorVar)
+            input.value = operatorVar
         } else {
             const result = operate(operatorVar, Number(firstNum), Number(secondNum))
-            console.log(result)
+            input.value = result
         }
 
         
