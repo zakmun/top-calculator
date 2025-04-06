@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;  
+}
+
+.container {
+    width: max-content;
+    margin: auto;
+    
+}
+
+input {
+    width: 100%;    
+    font-size: 48px;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    border: 3px solid;
+    text-align: end;
+
+}
+
+.btnContainer {
+    max-width: 400px;
+    display:flex;
+    flex-wrap: wrap;  
+}
+
+button {
+    flex: 1 33%;
+    padding: 15px;
+    font-size: 26px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.numbers {
+    background-color: rgb(197, 13, 62);
+}
+
+.operator {
+    background-color: rgb(255, 183, 0);
+}
