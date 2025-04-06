@@ -9,6 +9,7 @@ let operatorVar = '';
 
 input.value = 0;
 
+operatorBTN.forEach(btn => btn.disabled = true);
     
 
 clear.addEventListener("click", () => {
@@ -16,17 +17,16 @@ clear.addEventListener("click", () => {
         firstNum = '';
         secondNum = '';
         operatorVar = '';
+        operatorBTN.forEach(btn => btn.disabled = true);
 })
 
 
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
-        if (input.value === '0') {
-            input.value = e.target.innerText;
-            firstNum = input.value;
-        }else if (operatorVar === "") {
+        if (operatorVar === "") {
             firstNum += e.target.innerText
             input.value = firstNum
+            operatorBTN.forEach(btn => btn.disabled = false);
         } else {
             secondNum += e.target.innerText
             input.value = secondNum
@@ -38,17 +38,15 @@ numbers.forEach(num => {
 operatorBTN.forEach(ops => {
     ops.addEventListener("click", (e) => {
 
-        if (firstNum !== '') {
-            if (operatorVar === '') {
-                operatorVar = e.target.innerText
-                input.value = operatorVar
-            } else if (secondNum !== '') {
-                const result = operate(operatorVar, Number(firstNum), Number(secondNum));
-                input.value = Number(result.toFixed(2));
-                firstNum = input.value;
-                secondNum = '';
-                operatorVar = e.target.innerText;
-            }
+        if (e.target.innerText !== "=") {
+            operatorVar = e.target.innerText
+            input.value = operatorVar
+        } else {
+            const result = operate(operatorVar, Number(firstNum), Number(secondNum))
+            input.value = Number(result.toFixed(2))
+            firstNum = input.value;
+            secondNum = ''
+            operatorVar = ''
         }
     
     })
