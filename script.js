@@ -21,7 +21,10 @@ clear.addEventListener("click", () => {
 
 numbers.forEach(num => {
     num.addEventListener("click", (e) => {
-        if (operatorVar === "") {
+        if (input.value === '0') {
+            input.value = e.target.innerText;
+            firstNum = input.value;
+        }else if (operatorVar === "") {
             firstNum += e.target.innerText
             input.value = firstNum
         } else {
@@ -35,15 +38,17 @@ numbers.forEach(num => {
 operatorBTN.forEach(ops => {
     ops.addEventListener("click", (e) => {
 
-        if (e.target.innerText !== "=") {
-            operatorVar = e.target.innerText
-            input.value = operatorVar
-        } else {
-            const result = operate(operatorVar, Number(firstNum), Number(secondNum))
-            input.value = Number(result.toFixed(2))
-            firstNum = input.value;
-            secondNum = ''
-            operatorVar = ''
+        if (firstNum !== '') {
+            if (operatorVar === '') {
+                operatorVar = e.target.innerText
+                input.value = operatorVar
+            } else if (secondNum !== '') {
+                const result = operate(operatorVar, Number(firstNum), Number(secondNum));
+                input.value = Number(result.toFixed(2));
+                firstNum = input.value;
+                secondNum = '';
+                operatorVar = e.target.innerText;
+            }
         }
     
     })
